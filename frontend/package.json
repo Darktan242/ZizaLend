@@ -6,11 +6,12 @@
     "node": ">=22"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "node init && next dev",
+    "build": "node init && next build",
+    "start": "node init && next start",
     "lint": "prettier --check .",
     "typecheck": "tsc --noEmit",
+    "i18n:check": "node scripts/check-i18n.mjs",
     "audit:a11y": "next build && npx axe-playwright",
     "format": "prettier --write .",
     "test": "jest",
